@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decodificador de Texto</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <h1 class="cabecalho__titulo">Decodificador de Texto</h1>
+    </header>
+    <main class="conteudo">
+        <section class="conteudo__entrada-dados">
+            <form class="conteudo__entrada-dados__texto-entrada">
+                <label for="texto-entrada">Digite seu texto:</label><br>
+                <textarea name="texto-entrada" id="texto-entrada" class="text-area"></textarea>
+                <div class="conteudo__entrada-dados__texto-entrada__alerta">
+                    <ion-icon name="alert-circle-outline"></ion-icon>
+                    <p>ATENÇÃO: Apenas letras minúsculas e sem acento.</p>
+                </div>
+            </form>
+            <div class="conteudo__entrada-dados__botoes">
+                <button id="encrypt-btn" class="conteudo__entrada-dados__botoes__criptografar">Criptografar</button>
+                <button id="decrypt-btn" class="conteudo__entrada-dados__botoes__descriptografar">Descriptografar</button>
+            </div>
+        </section>        
+        <section id="conteudo__resultado" class="conteudo__resultado">            
+            <div class="conteudo__resultado__texto-container">
+                <textarea id="conteudo__resultado__texto-saida" class="conteudo__resultado__texto-saida" readonly></textarea>
+                <button id="copy-btn" class="conteudo__resultado__botao-copiar">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">
+        <div class="rodape__div">
+            <a href="https://www.linkedin.com/in/julianamanzieri/">
+                <img src="./assets/linkedin.png" alt="Imagem LinkedIn">
+            </a>
+            <a href="https://github.com/julianamanzieri">
+                <img src="./assets/github.png" alt="Imagem Github">
+            </a>
+        </div>
+        <p>Desenvolvido por Juliana Manzieri &copy; 2024.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

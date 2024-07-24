@@ -1,6 +1,6 @@
 # Decodificador de Texto
 
-Bem-vindo ao Decodificador de Texto, uma aplicação web que criptografa e descriptografa textos, permitindo a troca de mensagens secretas. Este projeto foi desenvolvido por Juliana Manzieri.
+Bem-vindo ao Decodificador de Texto, uma aplicação web que criptografa e descriptografa textos, permitindo a troca de mensagens secretas. Este projeto foi feito com base no "Challenge Decodificador de Texto" do projeto Oracle Next education em parceria com a Alura.
 
 ## Descrição
 

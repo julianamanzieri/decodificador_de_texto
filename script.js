@@ -23,6 +23,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
     ufat: "u",
   };
 
+  function removeAccents(str) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  }
+
+  function validateInput(text) {
+    const lowerCaseText = text.toLowerCase();
+    const cleanText = removeAccents(lowerCaseText);
+    if (cleanText !== text || /[^a-z\s]/.test(cleanText)) {
+      return false;
+    }
+    return true;
+  }
+
   function encryptText(text) {
     return text.replace(/[eioua]/g, (match) => encryptionKeys[match]);
   }
@@ -33,6 +46,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
       (match) => decryptionKeys[match]
     );
   }
+
+  inputTextArea.addEventListener("input", () => {
+    const start = inputTextArea.selectionStart;
+    const end = inputTextArea.selectionEnd;
+    const cleanText = removeAccents(inputTextArea.value.toLowerCase());
+    inputTextArea.value = cleanText;
+    inputTextArea.setSelectionRange(start, end);
+  });
 
   encryptBtn.addEventListener("click", () => {
     const inputText = inputTextArea.value;
